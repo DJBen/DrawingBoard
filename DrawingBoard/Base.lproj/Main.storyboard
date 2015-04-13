@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="DrawingBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +17,88 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4n8-PX-7iS">
+                                <rect key="frame" x="0.0" y="480" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.84235680103302002" green="0.085249267518520355" blue="0.13515172898769379" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4n8-PX-7iS" secondAttribute="height" multiplier="1:1" id="hP6-qJ-X4u"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHZ-5R-pLn">
+                                <rect key="frame" x="120" y="480" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.85367298126220703" green="0.82097059488296509" blue="0.14334006607532501" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca2-2W-EdD">
+                                <rect key="frame" x="240" y="480" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.18464171886444092" green="0.8778502345085144" blue="0.20009876787662506" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXA-64-jIq">
+                                <rect key="frame" x="480" y="480" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.81037271022796631" green="0.0" blue="0.85316073894500732" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3Z-vH-hlw">
+                                <rect key="frame" x="16" y="20" width="37" height="30"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYS-QD-Z1z">
+                                <rect key="frame" x="360" y="480" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.14487351477146149" green="0.37650981545448303" blue="0.85260051488876343" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ca2-2W-EdD" firstAttribute="leading" secondItem="xHZ-5R-pLn" secondAttribute="trailing" id="2Q3-dc-f6l"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="bottom" secondItem="4n8-PX-7iS" secondAttribute="bottom" id="2tC-f1-FrM"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="4n8-PX-7iS" secondAttribute="top" id="8CD-A7-Bs0"/>
+                            <constraint firstItem="4n8-PX-7iS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="AXd-6H-HzY"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="width" secondItem="4n8-PX-7iS" secondAttribute="width" id="BEb-bi-Z33"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="xHZ-5R-pLn" secondAttribute="top" id="CDM-QQ-k8g"/>
+                            <constraint firstItem="G3Z-vH-hlw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Ckl-P2-lf2"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="width" secondItem="xHZ-5R-pLn" secondAttribute="width" id="PfO-j6-op5"/>
+                            <constraint firstItem="xHZ-5R-pLn" firstAttribute="leading" secondItem="4n8-PX-7iS" secondAttribute="trailing" id="PwY-2M-ZIv"/>
+                            <constraint firstItem="4n8-PX-7iS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Q9Q-9J-8BZ"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="height" secondItem="ca2-2W-EdD" secondAttribute="height" id="QKS-oh-bdf"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="leading" secondItem="fYS-QD-Z1z" secondAttribute="trailing" id="Sqr-Oi-PHL"/>
+                            <constraint firstAttribute="trailing" secondItem="GXA-64-jIq" secondAttribute="trailing" id="TUD-t6-JMV"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="bottom" secondItem="xHZ-5R-pLn" secondAttribute="bottom" id="UUe-PE-bc6"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="bottom" secondItem="fYS-QD-Z1z" secondAttribute="bottom" id="Xpf-hl-VzS"/>
+                            <constraint firstItem="fYS-QD-Z1z" firstAttribute="leading" secondItem="ca2-2W-EdD" secondAttribute="trailing" id="ZeW-Mg-vF0"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="height" secondItem="fYS-QD-Z1z" secondAttribute="height" id="aRf-Lg-4V1"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="height" secondItem="4n8-PX-7iS" secondAttribute="height" id="c9s-Y3-PRT"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="width" secondItem="ca2-2W-EdD" secondAttribute="width" id="gr8-2e-kSi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GXA-64-jIq" secondAttribute="trailing" id="l7b-Ty-iQn"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="width" secondItem="fYS-QD-Z1z" secondAttribute="width" id="lfa-wb-Hpm"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="ca2-2W-EdD" secondAttribute="top" id="qFM-Az-lDi"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4n8-PX-7iS" secondAttribute="bottom" id="sQI-NK-auP"/>
+                            <constraint firstItem="G3Z-vH-hlw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="sau-en-dUD"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="bottom" secondItem="ca2-2W-EdD" secondAttribute="bottom" id="sbl-AH-dfV"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="height" secondItem="xHZ-5R-pLn" secondAttribute="height" id="w4g-Rf-Y86"/>
+                            <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="fYS-QD-Z1z" secondAttribute="top" id="zs0-n0-taP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AXd-6H-HzY"/>
+                                <exclude reference="l7b-Ty-iQn"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

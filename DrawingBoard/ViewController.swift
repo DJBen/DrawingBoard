@@ -9,7 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var selectColorButtons: [UIButton]!
+    
+    @IBAction func selectColorButtonTapped(sender: UIButton) {
+    
+    }
+    
+    @IBAction func panGestureDetected(sender: UIPanGestureRecognizer) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

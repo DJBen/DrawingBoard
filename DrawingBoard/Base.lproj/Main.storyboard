@@ -28,21 +28,21 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHZ-5R-pLn">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHZ-5R-pLn">
                                 <rect key="frame" x="120" y="480" width="120" height="120"/>
                                 <color key="backgroundColor" red="0.85367298126220703" green="0.82097059488296509" blue="0.14334006607532501" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca2-2W-EdD">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca2-2W-EdD">
                                 <rect key="frame" x="240" y="480" width="120" height="120"/>
                                 <color key="backgroundColor" red="0.18464171886444092" green="0.8778502345085144" blue="0.20009876787662506" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXA-64-jIq">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXA-64-jIq">
                                 <rect key="frame" x="480" y="480" width="120" height="120"/>
                                 <color key="backgroundColor" red="0.81037271022796631" green="0.0" blue="0.85316073894500732" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
@@ -55,7 +55,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYS-QD-Z1z">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYS-QD-Z1z">
                                 <rect key="frame" x="360" y="480" width="120" height="120"/>
                                 <color key="backgroundColor" red="0.14487351477146149" green="0.37650981545448303" blue="0.85260051488876343" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
@@ -64,11 +64,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ca2-2W-EdD" firstAttribute="leading" secondItem="xHZ-5R-pLn" secondAttribute="trailing" id="2Q3-dc-f6l"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="bottom" secondItem="4n8-PX-7iS" secondAttribute="bottom" id="2tC-f1-FrM"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="4n8-PX-7iS" secondAttribute="top" id="8CD-A7-Bs0"/>
-                            <constraint firstItem="4n8-PX-7iS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="AXd-6H-HzY"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="width" secondItem="4n8-PX-7iS" secondAttribute="width" id="BEb-bi-Z33"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="xHZ-5R-pLn" secondAttribute="top" id="CDM-QQ-k8g"/>
                             <constraint firstItem="G3Z-vH-hlw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Ckl-P2-lf2"/>
@@ -84,7 +84,6 @@
                             <constraint firstItem="GXA-64-jIq" firstAttribute="height" secondItem="fYS-QD-Z1z" secondAttribute="height" id="aRf-Lg-4V1"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="height" secondItem="4n8-PX-7iS" secondAttribute="height" id="c9s-Y3-PRT"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="width" secondItem="ca2-2W-EdD" secondAttribute="width" id="gr8-2e-kSi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GXA-64-jIq" secondAttribute="trailing" id="l7b-Ty-iQn"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="width" secondItem="fYS-QD-Z1z" secondAttribute="width" id="lfa-wb-Hpm"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="ca2-2W-EdD" secondAttribute="top" id="qFM-Az-lDi"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4n8-PX-7iS" secondAttribute="bottom" id="sQI-NK-auP"/>
@@ -93,15 +92,25 @@
                             <constraint firstItem="GXA-64-jIq" firstAttribute="height" secondItem="xHZ-5R-pLn" secondAttribute="height" id="w4g-Rf-Y86"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="fYS-QD-Z1z" secondAttribute="top" id="zs0-n0-taP"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="AXd-6H-HzY"/>
-                                <exclude reference="l7b-Ty-iQn"/>
-                            </mask>
-                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VX4-IW-epX" appends="YES" id="cnh-43-8zS"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outletCollection property="selectColorButtons" destination="4n8-PX-7iS" collectionClass="NSMutableArray" id="EHR-Cr-FEn"/>
+                        <outletCollection property="selectColorButtons" destination="xHZ-5R-pLn" collectionClass="NSMutableArray" id="iNc-Cm-a1q"/>
+                        <outletCollection property="selectColorButtons" destination="ca2-2W-EdD" collectionClass="NSMutableArray" id="1ca-3S-ITP"/>
+                        <outletCollection property="selectColorButtons" destination="fYS-QD-Z1z" collectionClass="NSMutableArray" id="UTX-Oy-64k"/>
+                        <outletCollection property="selectColorButtons" destination="GXA-64-jIq" collectionClass="NSMutableArray" id="IWV-Bg-gPU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="VX4-IW-epX">
+                    <connections>
+                        <action selector="panGestureDetected:" destination="vXZ-lx-hvc" id="gPI-gD-aDO"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="gAL-dZ-RUD"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>

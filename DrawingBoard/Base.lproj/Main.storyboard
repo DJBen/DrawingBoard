@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQc-kl-Dlv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4n8-PX-7iS">
                                 <rect key="frame" x="0.0" y="480" width="120" height="120"/>
                                 <color key="backgroundColor" red="0.84235680103302002" green="0.085249267518520355" blue="0.13515172898769379" alpha="1" colorSpace="calibratedRGB"/>
@@ -27,6 +30,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectColorButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GTO-gC-eLq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHZ-5R-pLn">
                                 <rect key="frame" x="120" y="480" width="120" height="120"/>
@@ -34,6 +40,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectColorButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Cd-Mc-TsH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca2-2W-EdD">
                                 <rect key="frame" x="240" y="480" width="120" height="120"/>
@@ -41,6 +50,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectColorButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qiO-N9-Fmu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXA-64-jIq">
                                 <rect key="frame" x="480" y="480" width="120" height="120"/>
@@ -48,12 +60,18 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectColorButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mgN-mx-hoI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3Z-vH-hlw">
                                 <rect key="frame" x="16" y="20" width="37" height="30"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clearBoardTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ppj-pr-dvS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYS-QD-Z1z">
                                 <rect key="frame" x="360" y="480" width="120" height="120"/>
@@ -61,17 +79,30 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectColorButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sfj-nY-6ev"/>
+                                </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="0xt-u0-L79">
+                                <rect key="frame" x="71" y="20" width="458" height="31"/>
+                                <connections>
+                                    <action selector="brushSliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Zwt-xV-kS2"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="LQc-kl-Dlv" secondAttribute="bottom" id="0nP-aO-MOA"/>
                             <constraint firstItem="ca2-2W-EdD" firstAttribute="leading" secondItem="xHZ-5R-pLn" secondAttribute="trailing" id="2Q3-dc-f6l"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="bottom" secondItem="4n8-PX-7iS" secondAttribute="bottom" id="2tC-f1-FrM"/>
+                            <constraint firstItem="LQc-kl-Dlv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="5GZ-vI-Vkn"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="4n8-PX-7iS" secondAttribute="top" id="8CD-A7-Bs0"/>
+                            <constraint firstAttribute="trailing" secondItem="LQc-kl-Dlv" secondAttribute="trailing" id="8fH-li-8AZ"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="width" secondItem="4n8-PX-7iS" secondAttribute="width" id="BEb-bi-Z33"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="xHZ-5R-pLn" secondAttribute="top" id="CDM-QQ-k8g"/>
                             <constraint firstItem="G3Z-vH-hlw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Ckl-P2-lf2"/>
+                            <constraint firstItem="0xt-u0-L79" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="NiH-xb-08I"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="width" secondItem="xHZ-5R-pLn" secondAttribute="width" id="PfO-j6-op5"/>
                             <constraint firstItem="xHZ-5R-pLn" firstAttribute="leading" secondItem="4n8-PX-7iS" secondAttribute="trailing" id="PwY-2M-ZIv"/>
                             <constraint firstItem="4n8-PX-7iS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Q9Q-9J-8BZ"/>
@@ -82,14 +113,17 @@
                             <constraint firstItem="GXA-64-jIq" firstAttribute="bottom" secondItem="fYS-QD-Z1z" secondAttribute="bottom" id="Xpf-hl-VzS"/>
                             <constraint firstItem="fYS-QD-Z1z" firstAttribute="leading" secondItem="ca2-2W-EdD" secondAttribute="trailing" id="ZeW-Mg-vF0"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="height" secondItem="fYS-QD-Z1z" secondAttribute="height" id="aRf-Lg-4V1"/>
+                            <constraint firstItem="0xt-u0-L79" firstAttribute="leading" secondItem="G3Z-vH-hlw" secondAttribute="trailing" constant="20" id="ayI-72-BV0"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="height" secondItem="4n8-PX-7iS" secondAttribute="height" id="c9s-Y3-PRT"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="width" secondItem="ca2-2W-EdD" secondAttribute="width" id="gr8-2e-kSi"/>
+                            <constraint firstItem="LQc-kl-Dlv" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="lKv-6h-LfA"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="width" secondItem="fYS-QD-Z1z" secondAttribute="width" id="lfa-wb-Hpm"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="ca2-2W-EdD" secondAttribute="top" id="qFM-Az-lDi"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4n8-PX-7iS" secondAttribute="bottom" id="sQI-NK-auP"/>
                             <constraint firstItem="G3Z-vH-hlw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="sau-en-dUD"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="bottom" secondItem="ca2-2W-EdD" secondAttribute="bottom" id="sbl-AH-dfV"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="height" secondItem="xHZ-5R-pLn" secondAttribute="height" id="w4g-Rf-Y86"/>
+                            <constraint firstAttribute="centerX" secondItem="0xt-u0-L79" secondAttribute="centerX" id="wcn-r7-Iib"/>
                             <constraint firstItem="GXA-64-jIq" firstAttribute="top" secondItem="fYS-QD-Z1z" secondAttribute="top" id="zs0-n0-taP"/>
                         </constraints>
                         <connections>
@@ -97,6 +131,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="LQc-kl-Dlv" id="2b8-Cj-n3E"/>
                         <outletCollection property="selectColorButtons" destination="4n8-PX-7iS" collectionClass="NSMutableArray" id="EHR-Cr-FEn"/>
                         <outletCollection property="selectColorButtons" destination="xHZ-5R-pLn" collectionClass="NSMutableArray" id="iNc-Cm-a1q"/>
                         <outletCollection property="selectColorButtons" destination="ca2-2W-EdD" collectionClass="NSMutableArray" id="1ca-3S-ITP"/>
